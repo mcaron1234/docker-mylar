@@ -6,13 +6,12 @@ ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="sparklyballs"
 ENV PYTHONUNBUFFERED=1
-ENV USER=abc
 
 RUN \
  echo "**** install system packages ****" && \
  apk add --no-cache \
-	git=2.24.1-r0 \
-	nodejs=12.15.0-r1 \
+    git=2.24.1-r0 \
+    nodejs=12.15.0-r1 \
     build-base=0.5-r1 \
     libffi-dev=3.2.1-r6 \
     zlib-dev=1.2.11-r3 \
